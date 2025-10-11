@@ -1,0 +1,179 @@
+/* --- CSS START ---
+ * Pure White Neumorphism Navbar Styles
+ */
+
+/* --- 1. Define Colors & Base Styles --- */
+:root {
+    /* Tricolor Flag Colors (Kept ONLY for hover effect) */
+    --saffron: #FF9933;
+    --white: #FFFFFF;
+    --green: #138808;
+    
+    /* Light Neumorphism Colors */
+    --light-bg: #E0E0E0; 
+    --dark-shadow: #A3A3A3; 
+    --light-shadow: #FFFFFF; 
+    
+    --text-color: #333333; 
+    --animation-speed: 3s; 
+}
+
+body {
+    background-color: var(--light-bg); 
+    margin: 0; 
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+}
+
+/* --- 2. Background Text Layer ("STRIKE") REMOVED --- */
+/* The body::before rule is completely absent now. */
+
+/* --- 3. Responsive Navbar Container - Pure Neumorphism Base --- */
+.neon-navbar {
+    display: flex; /* Main container uses flex to align logo and links */
+    justify-content: space-between; /* Space out the logo and the link container */
+    align-items: center;
+    width: 90%; 
+    max-width: 1200px;
+    padding: 15px 25px; /* Added horizontal padding */
+    margin: 20px auto; 
+    background-color: var(--light-bg); 
+    border-radius: 20px; 
+    position: relative;
+    z-index: 10; 
+
+    animation: light-neumorphism-pulse var(--animation-speed) infinite alternate;
+}
+
+/* Container for links so they can be grouped on the right */
+.nav-links-container {
+    display: flex;
+    align-items: center;
+}
+
+/* --- 4. NEW: Logo Text Styling (Neumorphism Look) --- */
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-decoration: none;
+    padding: 5px 10px;
+    color: var(--text-color);
+    letter-spacing: 2px;
+    
+    /* Applying the "embossed" Neumorphic look */
+    text-shadow: 
+        1px 1px 2px var(--dark-shadow),    /* Dark shadow (down-right) */
+        -1px -1px 2px var(--light-shadow); /* Light shadow (up-left) */
+    
+    /* The container itself is part of the overall navbar Neumorphism */
+    transition: transform 0.2s;
+}
+
+.logo-text:hover {
+    /* Subtle press on hover */
+    transform: scale(0.98);
+}
+
+/* --- 5. Navigation Link Styling --- */
+.nav-link {
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid transparent; 
+    color: var(--text-color); 
+    
+    animation: none;
+    
+    /* Subtle Neumorphism link lift */
+    box-shadow: 2px 2px 4px var(--dark-shadow), -2px -2px 4px var(--light-shadow);
+    border-radius: 10px;
+}
+
+/* ------------------------------------------------------------------ */
+/* --- 6. Tricolor Flag Hover Effect --- */
+/* ------------------------------------------------------------------ */
+.nav-link:hover {
+    /* Text Shadow - Subtle white glow on hover */
+    color: var(--text-color); 
+    text-shadow: 
+        0 0 1px var(--white);
+    
+    /* Flag Effect + Pressed Neumorphism */
+    box-shadow: 
+        /* The Flag Strips (The only color here) */
+        0 5px 0 0 var(--green),
+        0 -5px 0 0 var(--saffron),
+        /* Inner shadow for the "pressed into the background" effect */
+        inset 5px 5px 10px var(--dark-shadow), 
+        inset -5px -5px 10px var(--light-shadow); 
+        
+    transform: scale(0.98); 
+    cursor: pointer;
+}
+
+
+/* ---------------------------------------------------- */
+/* --- 7. Keyframes Animations --- */
+/* ---------------------------------------------------- */
+
+/* A. Navbar Neumorphism Pulse */
+@keyframes light-neumorphism-pulse {
+    0%   { 
+        box-shadow: 
+            8px 8px 15px var(--dark-shadow),
+            -8px -8px 15px var(--light-shadow);
+    }
+    50%  { 
+        box-shadow: 
+            12px 12px 20px var(--dark-shadow),
+            -12px -12px 20px var(--light-shadow);
+    }
+    100% { 
+        box-shadow: 
+            8px 8px 15px var(--dark-shadow),
+            -8px -8px 15px var(--light-shadow); 
+    }
+}
+
+
+/* ---------------------------------------------------- */
+/* --- 8. Responsiveness --- */
+/* ---------------------------------------------------- */
+@media (max-width: 768px) {
+    .neon-navbar {
+        /* Stack the logo and the links container vertically */
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+        margin-top: 10px;
+    }
+    
+    .logo-text {
+        margin-bottom: 15px; /* Space between logo and links */
+        font-size: 1.5rem;
+    }
+
+    .nav-links-container {
+        /* Make the link container use a grid for mobile */
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 10px; 
+        width: 100%;
+    }
+
+    .nav-link {
+        text-align: center;
+        margin: 0; 
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+    
+    /* Ensure the last link takes up its own row if the count is odd */
+    .nav-links-container a:nth-last-child(1):nth-child(odd) {
+        grid-column: span 2;
+    }
+}

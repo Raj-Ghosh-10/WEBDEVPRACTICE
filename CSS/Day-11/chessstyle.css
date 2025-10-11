@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(255, 251, 0);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: rgb(0, 255, 34);
+    height: 400px;
+    width: 400px;
+    display: grid;
+    grid-template-rows: repeat(8,1fr);
+    grid-template-columns: repeat(8,1fr);
+}
+.white{
+    border-radius:10px;
+    background-color: aliceblue;
+}
+.black{
+    background-color: black;
+    border-radius:10px;
+}

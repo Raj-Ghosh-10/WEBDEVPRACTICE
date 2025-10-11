@@ -1,0 +1,374 @@
+/* ------------------------------
+   GLOBAL STYLES
+--------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: #0d1117;
+  --bg-light: #161b22;
+  --border: #30363d;
+  --text-primary: #ffffff;
+  --text-secondary: #9ba3b0;
+  --accent: #f1c40f; /* royal gold */
+  --shadow-light: rgba(255, 255, 255, 0.05);
+  --shadow-dark: rgba(0, 0, 0, 0.6);
+  --radius: 16px;
+}
+
+
+body {
+  background: black;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ------------------------------
+   LAYOUT
+--------------------------------*/
+.main-container {
+  display: grid;
+  max-width: 1200px;
+  grid-template-columns: 350px 1fr;
+  gap: 50px;
+  padding: 40px 20px;
+  margin: auto;
+}
+
+.sidebar,
+.main-content {
+  background: var(--bg-light);
+  border-radius: var(--radius);
+  padding: 40px;
+  box-shadow: -8px -8px 16px var(--shadow-light),
+    8px 8px 16px var(--shadow-dark);
+  transition: all 0.3s ease;
+}
+
+.sidebar:hover,
+.main-content:hover {
+  box-shadow: -4px -4px 12px var(--shadow-light),
+    4px 4px 12px var(--shadow-dark);
+}
+.sidebar{
+    height: 800px;
+}
+/* ------------------------------
+   PROFILE
+--------------------------------*/
+.profile {
+  text-align: center;
+}
+
+.profile img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--bg-dark);
+  box-shadow: inset -4px -4px 8px var(--shadow-light),
+    inset 4px 4px 8px var(--shadow-dark);
+}
+
+.profile h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 20px;
+  color: var(--text-primary);
+}
+
+.profile p {
+  background: var(--bg-dark);
+  padding: 5px 15px;
+  color: var(--accent);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  display: inline-block;
+  margin-top: 10px;
+  box-shadow: inset -3px -3px 6px var(--shadow-light),
+    inset 3px 3px 6px var(--shadow-dark);
+}
+
+/* ------------------------------
+   CONTACT
+--------------------------------*/
+.contact {
+  margin-top: 30px;
+  border-top: 2px solid var(--border);
+  padding-top: 20px;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.value {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.value:hover {
+  color: var(--accent);
+}
+
+/* ------------------------------
+   SOCIAL
+--------------------------------*/
+.social {
+  margin-top: 30px;
+  border-top: 2px solid var(--border);
+  padding-top: 20px;
+  text-align: center;
+}
+
+.social img {
+  height: 28px;
+  width: 28px;
+  margin: 0 12px;
+  filter: grayscale(1) brightness(0.8);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.social img:hover {
+  filter: grayscale(0);
+  transform: scale(1.2);
+}
+
+/* ------------------------------
+   NAVIGATION
+--------------------------------*/
+#navigation {
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--accent);
+}
+
+/* ------------------------------
+   HEADINGS & CONTENT
+--------------------------------*/
+.heading {
+  color: var(--text-primary);
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.line {
+  width: 60px;
+  height: 5px;
+  background: var(--accent);
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.content {
+  text-align: justify;
+  color: var(--text-secondary);
+}
+
+/* ------------------------------
+   SKILLS
+--------------------------------*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.item {
+  padding: 25px 15px;
+  border-radius: 16px;
+  background: var(--bg-dark);
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: -6px -6px 12px var(--shadow-light),
+    6px 6px 12px var(--shadow-dark);
+}
+
+.item img {
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+.item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.item:hover {
+  transform: translateY(-8px);
+  box-shadow: -2px -2px 6px var(--shadow-light),
+    2px 2px 6px var(--shadow-dark);
+}
+
+/* ------------------------------
+   EDUCATION
+--------------------------------*/
+#education {
+  margin-top: 40px;
+}
+
+.year {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+
+.degree {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.college {
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.work {
+  color: var(--text-secondary);
+}
+
+.edfirst,
+.edsecond {
+  margin-bottom: 30px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.goal {
+  height: 15px;
+  width: 15px;
+  border: 3px solid var(--accent);
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+.liner {
+  position: absolute;
+  width: 2px;
+  top: 0;
+  bottom: 0;
+  left: 6px;
+  background: var(--border);
+}
+
+/* ------------------------------
+   PORTFOLIO
+--------------------------------*/
+.project-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.project {
+  background: var(--bg-dark);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: -6px -6px 12px var(--shadow-light),
+    6px 6px 12px var(--shadow-dark);
+}
+
+.project:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.project img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 2px solid var(--border);
+}
+
+.card {
+  padding: 20px;
+}
+
+.card h3 {
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+}
+
+.card span {
+  background: rgba(255, 191, 0, 0.1);
+  color: var(--accent);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-right: 6px;
+  display: inline-block;
+}
+
+/* ------------------------------
+   RESPONSIVE
+--------------------------------*/
+@media screen and (max-width: 1200px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: static;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+}

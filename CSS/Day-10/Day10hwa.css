@@ -1,0 +1,107 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(76, 43, 219);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    padding: 50px;
+    background-color: rgb(255, 255, 255);
+    height: 600px;
+    width: 400px;
+    border-radius: 10px;
+}
+#toptext{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#text11{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+#text1{
+    border-radius: 20px;
+    width: 100%;
+    height: 40px;
+    padding: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#text22{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+#text2{
+    border-radius: 20px;
+    width: 100%;
+    height: 40px;
+    padding: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#pass11{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+#pass1{
+    border-radius: 20px;
+    width: 100%;
+    height: 40px;
+    padding: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#pass22{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+#pass2{
+    border-radius: 20px;
+    width: 100%;
+    height: 40px;
+    padding: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#buttonsignup{
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%; 
+    height: 50px; 
+    font-size: 20px; 
+    padding: 5px; 
+    background-color: rgb(76, 43, 219);
+    color: white; 
+    font-weight: 600;
+}

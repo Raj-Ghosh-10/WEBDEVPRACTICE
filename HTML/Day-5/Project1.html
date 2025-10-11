@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>University Registration Form</h1>
+    <h5>Please fill out the form brlow to register.</h5>
+    <hr>
+    <form>
+        <h2>Personal Details</h2>
+        <label for="fname">First name :</label>
+        <input type="text" name="fname" id="fname" placeholder="e.g. Raj">
+        <br><br>
+        <label for="lname">Last name :</label>
+        <input type="text" name="lname" id="lname" placeholder="e.g. Ghosh">
+        <br><br>
+        <label for="DOB">Date of Birth :</label>
+        <input type="date" name="DOB" id="DOB">
+        <br><br>
+        <label for="gender">Gender :</label>
+        <br>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="male">
+        <br>
+        <label for="female">Female</label>
+        <input type="radio" name="gendermale" id="female" value="female">
+        <br>
+        <label for="other">Other</label>
+        <input type="radio" name="gender" id="other" value="other">
+        <br><br>
+        <label for="uploadphoto">Uploadphoto Your Photo :</label>
+        <br>
+        <input type="file" name="photo" id="uploadphoto">
+        <hr>
+        <h2>Contract Information</h2>
+        <label for="email">Email Address :</label>
+        <input type="email" name="email" id="email" placeholder="e.g. raj@gamil.com">
+        <br><br>
+        <label for="phonenumber">Phone Number :</label>
+        <input type="number" name="phonenumber" id="phonenumber" placeholder="e.g. 0123456789">
+        <br><br>
+        <label for="mailingaddress">Mailing Address :</label>
+        <br>
+        <textarea name="mailingaddress" id="mailingaddress" cols="30" rows="4">Street Address , City , State , ZIP code................</textarea>
+        <hr>
+        <h2>Academic Information</h2>
+        <br>
+        <label for="course">Select Your Course :</label>
+        <select name="course" id="course">
+            <option value="cse">CSE</option>
+            <option value="Me">ME</option>
+            <option value="Ce">CE</option>
+            <option value="Ee">EE</option>
+            <option value="cfs">CFS</option>
+        </select>
+        <br><br>
+        <label for="extracurrricularinterests">Extracurrricular Interests :</label>
+        <br>
+        <label for="sports">Sports</label>
+        <input type="checkbox" name="extracurrricularinterests" id="sports">
+        <br>
+        <label for="music&arts">Music & Arts</label>
+        <input type="checkbox" name="extracurrricularinterests" id="music&arts">
+        <br>
+        <label for="technoogyclub">Technoogy Club</label>
+        <input type="checkbox" name="extracurrricularinterests" id="technoogyclub">
+        <br>
+        <label for="volinteering">Volinteering</label>
+        <input type="checkbox" name="extracurrricularinterests" id="volinteering">
+        <hr>
+        <h2>Create Your Account</h2>
+        <br>
+        <label for="password">Create a Password :</label>
+        <input type="password" name="password" id="password">
+        <br><br>
+        <label for="securityquestion">Security Question :</label>
+        <select name="securityquestion" id="securityquestion" >
+            <option value="What is your oldest sibling’s middle name?">What is your oldest sibling’s middle name?</option>
+            <option value="What’s your favorite movie?">What’s your favorite movie?</option>
+            <option value="What was your first car?">What was your first car?</option>
+            <option value="What is your astrological sign?">What is your astrological sign?</option>
+        </select>
+        <br><br>
+        <label for="securityanswer">Security Answer :</label>
+        <input type="text" name="securityanswer" id="securityanswer">
+        <br><br>
+        <input type="checkbox" name="iagreeornot" id="iagreeornot">
+        <label for="iagreeornot">I agree to the Terms and Conditions.</label>
+        <hr>
+        <button type="submit">Register</button>
+        <button type="reset">Clear Form</button>
+    </form>
+</body>
+</html>

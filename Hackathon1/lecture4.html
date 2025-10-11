@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lecture 4 - HTML</title>
+</head>
+<body bgcolor="#f2f2f2">
+
+  <!-- Lecture Title -->
+  <h1 align="center">Lecture 4: File Path in HTML | HTML BoilerPlate Code | DIV + Class + ID | </h1>
+  <hr>
+
+  <!-- Video Tutorial -->
+  <h2>🎥 Full Video Lecture</h2>
+  <p align="center">
+    <iframe width="560" height="315" 
+      src="https://www.youtube.com/embed/k78lNSAB8VY"
+       allowfullscreen>
+    </iframe>
+  </p>
+  <hr>
+
+  
+  <!-- card 1 -->
+  <table border="1" width="90%" align="center" cellpadding="10" cellspacing="0" bgcolor="#ffffff">
+  <!-- Heading Row -->
+  <tr bgcolor="#d0d0d0">
+    <td colspan="2" align="center">
+      <h2> 1. Understanding File Paths</h2>
+    </td>
+  </tr>
+
+  <!-- Notes Row -->
+  <tr>
+    <td colspan="2">
+      <h3>📖 Notes:</h3>
+      <p> If your index.html file needs to display an image named logo.png, how does the HTML file tell the browser where to **find** logo.png?
+<br>
+You can't just say src="logo.png" and expect it to work every time. What if the logo is in an images folder? What if it's on a completely different website?
+<br>
+The browser needs an exact, unambiguous address to locate the file. **A file path is that address.**  </p>
+    </td>
+  </tr>
+
+  <!-- Diagram + Video Row -->
+  <tr>
+    <!-- Diagram Left -->
+    <td align="center" width="50%">
+      <img src="images/lec4/i1.png" alt="File Paths" width="90%">
+    </td>
+
+    <!-- Video Right -->
+    <td align="center" width="50%">
+      <h3>🎥 Watch:</h3>
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/k78lNSAB8VY?start=83"
+        frameborder="0" allowfullscreen>
+      </iframe>
+    </td>
+  </tr>
+</table>
+
+  
+  <!-- card 2 -->
+  <table border="1" width="90%" align="center" cellpadding="10" cellspacing="0" bgcolor="#ffffff">
+  <!-- Heading Row -->
+  <tr bgcolor="#d0d0d0">
+    <td colspan="2" align="center">
+      <h2> 2. Types of File Paths</h2>
+    </td>
+  </tr>
+
+  <!-- Notes Row -->
+  <tr>
+    <td colspan="2">
+      <h3>📖 Notes:</h3>
+      <p>  The two main types of file paths are Absolute Paths and Relative Paths.</p>
+    </td>
+  </tr>
+
+  <!-- Diagram + Video Row -->
+  <tr>
+    <!-- Diagram Left -->
+    <td align="center" width="50%">
+      <img src="images/lec4/i2.png" alt="File Paths types" width="90%">
+    </td>
+
+    <!-- Video Right -->
+    <td align="center" width="50%">
+      <h3>🎥 Watch:</h3>
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/k78lNSAB8VY?start=217"
+        frameborder="0" allowfullscreen>
+      </iframe>
+    </td>
+  </tr>
+</table>
+
+
+<!-- card 3 -->
+  <table border="1" width="90%" align="center" cellpadding="10" cellspacing="0" bgcolor="#ffffff">
+  <!-- Heading Row -->
+  <tr bgcolor="#d0d0d0">
+    <td colspan="2" align="center">
+      <h2> 3. Relative Path</h2>
+    </td>
+  </tr>
+
+  <!-- Notes Row -->
+  <tr>
+    <td colspan="2">
+      <h3>📖 Notes:</h3>
+      <p>  A relative file path gives directions to a file starting from the location of the file you are currently in. You will use this 99% of the time for linking your own files together (images, CSS, other HTML pages).</p>
+    </td>
+  </tr>
+
+  <!-- Diagram + Video Row -->
+  <tr>
+    <!-- Diagram Left -->
+    <td align="center" width="50%">
+      <img src="images/lec4/i3.png" alt="Relative Path" width="90%">
+    </td>
+
+    <!-- Video Right -->
+    <td align="center" width="50%">
+      <h3>🎥 Watch:</h3>
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/k78lNSAB8VY?start=321"
+        frameborder="0" allowfullscreen>
+      </iframe>
+    </td>
+  </tr>
+</table>
+
+<!-- card 4 -->
+  <table border="1" width="90%" align="center" cellpadding="10" cellspacing="0" bgcolor="#ffffff">
+  <!-- Heading Row -->
+  <tr bgcolor="#d0d0d0">
+    <td colspan="2" align="center">
+      <h2> 4. Absolute Path</h2>
+    </td>
+  </tr>
+
+  <!-- Notes Row -->
+  <tr>
+    <td colspan="2">
+      <h3>📖 Notes:</h3>
+      <p> An absolute file path gives the full, complete URL to a resource on the web. It starts with http:// or https://. </p>
+    </td>
+  </tr>
+
+  <!-- Diagram + Video Row -->
+  <tr>
+    <!-- Diagram Left -->
+    <td align="center" width="50%">
+      <img src="images/lec4/i4.png" alt="Absolute Path" width="90%">
+    </td>
+
+    <!-- Video Right -->
+    <td align="center" width="50%">
+      <h3>🎥 Watch:</h3>
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/k78lNSAB8VY?start=862"
+        frameborder="0" allowfullscreen>
+      </iframe>
+    </td>
+  </tr>
+</table>
+
+<!-- card 5 -->
+  <table border="1" width="90%" align="center" cellpadding="10" cellspacing="0" bgcolor="#ffffff">
+  <!-- Heading Row -->
+  <tr bgcolor="#d0d0d0">
+    <td colspan="2" align="center">
+      <h2> 5. Boilerplate Code</h2>
+    </td>
+  </tr>
+
+  <!-- Notes Row -->
+  <tr>
+    <td colspan="2">
+      <h3>📖 Notes:</h3>
+      <p>  The solution is to create a standard, universal starting template—a **boilerplate**. This is a block of code that you will start every single HTML file with. It's not something you need to reinvent each time; you just copy-paste it and fill in the blanks.
+<br>
+It's the "blueprint of the house" that you need before you can start putting in the walls (h1) and windows (img).</p>
+    </td>
+  </tr>
+
+  <!-- Diagram + Video Row -->
+  <tr>
+    <!-- Diagram Left -->
+    <td align="center" width="50%">
+      <img src="images/lec4/i5.png" alt="Boilerplate Code" width="90%">
+    </td>
+
+    <!-- Video Right -->
+    <td align="center" width="50%">
+      <h3>🎥 Watch:</h3>
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/k78lNSAB8VY?start=1935"
+        frameborder="0" allowfullscreen>
+      </iframe>
+    </td>
+  </tr>
+</table>
+
+
+<!-- card 6 -->
+  <table border="1" width="90%" align="center" cellpadding="10" cellspacing="0" bgcolor="#ffffff">
+  <!-- Heading Row -->
+  <tr bgcolor="#d0d0d0">
+    <td colspan="2" align="center">
+      <h2> 6. div tag</h2>
+    </td>
+  </tr>
+
+  <!-- Notes Row -->
+  <tr>
+    <td colspan="2">
+      <h3>📖 Notes:</h3>
+      <p>  The most basic solution is to invent a generic, **meaningless** container. Its only job is to be a box that you can put other things into. It shouldn't have any inherent meaning or style; it's just a grouping mechanism.
+<br>
+This is the **div** (short for "division").
+<br>
+By wrapping our elements in a div, we create a single "box" that we can now control.</p>
+    </td>
+  </tr>
+
+  <!-- Diagram + Video Row -->
+  <tr>
+    <!-- Diagram Left -->
+    <td align="center" width="50%">
+      <img src="images/lec4/i6.png" alt="div tag" width="90%">
+    </td>
+
+    <!-- Video Right -->
+    <td align="center" width="50%">
+      <h3>🎥 Watch:</h3>
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/k78lNSAB8VY?start=2839"
+        frameborder="0" allowfullscreen>
+      </iframe>
+    </td>
+  </tr>
+</table>
+
+
+<!-- card 7 -->
+  <table border="1" width="90%" align="center" cellpadding="10" cellspacing="0" bgcolor="#ffffff">
+  <!-- Heading Row -->
+  <tr bgcolor="#d0d0d0">
+    <td colspan="2" align="center">
+      <h2> 7. class & id</h2>
+    </td>
+  </tr>
+
+  <!-- Notes Row -->
+  <tr>
+    <td colspan="2">
+      <h3>📖 Notes:</h3>
+      <p>  The logical solution is to invent two types of labels (which we call **attributes**) that you can add to any HTML tag.
+<br>
+1. **A Unique Identifier:** We need a label for one, and only one, specific element on the entire page. It must be unique. This is perfect for major, one-of-a-kind layout sections like the main navigation bar or a search form. This is the **id**. <br>
+2. **A Reusable Classifier:** We also need a label that we can apply to *multiple* elements to group them into a category. This is for things that have a similar style or function, like all the profile cards, all the error messages, or all the "buy now" buttons. This is the **class**.</p>
+    </td>
+  </tr>
+
+  <!-- Diagram + Video Row -->
+  <tr>
+    <!-- Diagram Left -->
+    <td align="center" width="50%">
+      <img src="images/lec4/i7.png" alt="class & id" width="90%">
+    </td>
+
+    <!-- Video Right -->
+    <td align="center" width="50%">
+      <h3>🎥 Watch:</h3>
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/k78lNSAB8VY?start=3144"
+        frameborder="0" allowfullscreen>
+      </iframe>
+    </td>
+  </tr>
+</table>
+
+
+<!-- card 8 -->
+  <table border="1" width="90%" align="center" cellpadding="10" cellspacing="0" bgcolor="#ffffff">
+  <!-- Heading Row -->
+  <tr bgcolor="#d0d0d0">
+    <td colspan="2" align="center">
+      <h2> 8. Header, Main & Footer</h2>
+    </td>
+  </tr>
+
+  <!-- Notes Row -->
+  <tr>
+    <td colspan="2">
+      <h3>📖 Notes:</h3>
+      <p>  - **header**: This is the box for the introductory content at the top of your page or a section. It typically contains your logo, site navigation (nav), and main heading. <br>
+- **footer**: The box for the closing content at the bottom. It usually contains copyright info, contact details, and secondary links. <br>
+- **main**: This is the most important one. It defines the **main, unique content** of that specific page. It should not contain things that are repeated on every page (like the header or footer). There should only be **one** main tag per page.</p>
+    </td>
+  </tr>
+
+  <!-- Diagram + Video Row -->
+  <tr>
+    <!-- Diagram Left -->
+    <td align="center" width="50%">
+      <img src="images/lec4/i8.png" alt="Header, Main & Footer" width="90%">
+    </td>
+
+    <!-- Video Right -->
+    <td align="center" width="50%">
+      <h3>🎥 Watch:</h3>
+      <iframe width="100%" height="315" 
+        src="https://www.youtube.com/embed/k78lNSAB8VY?start=3532"
+        frameborder="0" allowfullscreen>
+      </iframe>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+</body>
+</html>

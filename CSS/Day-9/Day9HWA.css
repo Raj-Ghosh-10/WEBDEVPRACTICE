@@ -1,0 +1,29 @@
+#container{
+    height: 200px;
+    width: 300px;
+    background-color: rgb(12, 39, 128);
+    position: relative;
+}
+
+.box{
+    height: 50px;
+    width: 300px;
+    background-color: red;
+}
+.first{
+    position: absolute;
+    top: 0px;
+}
+.second{
+    position: absolute;
+    bottom: 0px;
+}
+.third{
+    background-color: aliceblue;
+    height: 65px;
+    width: 65px;
+    position: absolute;
+    border-radius: 50%;
+    top: 65px;
+    left: 110px;
+}
