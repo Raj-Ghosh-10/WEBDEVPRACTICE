@@ -143,19 +143,19 @@ const products = [
 
 
 // map;
-const m1 = new Map([
-    ["Rohit", 40],
-    [2, "Rohit"],
+const mp = new Map([
+    ["Raj", 40],
+    [2, "Raj"],
     [true, 11],
     [[10,30,11], "Mohit"]
 ]);
 
 
-m1.set({name:"Manish",age:20}, false);
+mp.set({name:"Manish",age:20}, false);
 
-// console.log(m1.size);
+// console.log(mp.size);
 
-for(let [keys,value] of m1){
+for(let [keys,value] of mp){
     console.log(keys, value);
 
 }
